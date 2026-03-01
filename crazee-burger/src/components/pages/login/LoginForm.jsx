@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function LoginForm() {
  // state
@@ -12,7 +13,6 @@ export default function LoginForm() {
 
   const handleSubmit = (event) => { 
     event.preventDefault()
-    alert(`Bonjour ${inputValue} !`)
     setInputValue("")
    }
 
@@ -28,6 +28,7 @@ export default function LoginForm() {
         value={inputValue} 
         onChange={handleChange}/>
       <button>Accédez à votre espace</button>
+      <Link to="/order">Vers orderPage</Link>
     </form>
     
   )
